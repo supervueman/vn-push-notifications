@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "send_push_notifications",
+    "value": "Отправить push уведомления"
+  },
+  {
+    "slug": "subscribe",
+    "value": "Подписаться"
+  }
+]

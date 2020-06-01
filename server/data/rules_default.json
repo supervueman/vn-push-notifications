@@ -1,0 +1,26 @@
+{
+  "is_push_notification_subscribe": {
+    "title": "Allow subscribe to push notifications",
+    "value": true
+  },
+  "is_push_notification_send": {
+    "title": "Allow to send push notifications",
+    "value": false
+  },
+  "is_push_notification_read": {
+    "title": "Allow viewing contexts push notifications",
+    "value": false
+  },
+  "is_push_notification_create": {
+    "title": "Allow creating push notifications",
+    "value": false
+  },
+  "is_push_notification_update": {
+    "title": "Allow changing push notifications",
+    "value": false
+  },
+  "is_push_notification_delete": {
+    "title": "Allow delete push notifications",
+    "value": false
+  }
+}
