@@ -3,6 +3,17 @@
 		v-if="notificationTemplates.length > 0"
 		outlined
 	)
+		v-card-text
+			v-layout.align-center.justify-space-between
+				div Templates
+				v-btn(
+					fab
+					small
+					color="primary"
+					depressed
+					@click="reload"
+				)
+					v-icon replay
 		v-card-text.pb-1
 			v-layout.justify-space-between.mb-4(
 				v-for="(notification, i) in notificationTemplates"
@@ -55,6 +66,9 @@ export default {
           notificationTemplates
         );
       }
+    },
+    async reload() {
+      await this.$store.dispatch('push-notifications/findAll', {});
     }
   }
 };

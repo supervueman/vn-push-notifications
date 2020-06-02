@@ -54,8 +54,7 @@ const Model = sequelize.define('push-notification-template', {
   title: {
     type: Sequelize.TEXT,
     allowNull: true,
-    notEmpty: false,
-    unique: true
+    notEmpty: false
   },
   options: {
     type: Sequelize.TEXT
