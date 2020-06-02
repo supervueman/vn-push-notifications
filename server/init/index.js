@@ -7,7 +7,7 @@ const newRulesManager = require('../data/rules_manager.json');
 const newRulesDefault = require('../data/rules_default.json');
 
 // Healpers
-const createLexicons = require('../../lexicon/helpers/createLexicons');
+const createLexicons = require('../../../core/modules/lexicon/helpers/createLexicons');
 const addNewRules = require('../../../handlers/addNewRules');
 
 module.exports = async () => {

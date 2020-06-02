@@ -1,5 +1,5 @@
 const Model = require('../model');
-const Context = require('../../context/model');
+const Context = require('../../../core/modules/context/model');
 const PushNotification = require('../model/pushNotification');
 
 module.exports = () => {
