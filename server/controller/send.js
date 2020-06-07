@@ -4,10 +4,7 @@ const webPush = require('web-push');
 module.exports = async (req, res) => {
   if (!req.rules.is_push_notification_send) {
     logger('error', 'push-notification', 403, 'send.js');
-    res.status(403).send({
-      message: 'Forbidden'
-    });
-    return;
+    sendRes({ res, status: 403 });
   }
 
   const subscribers = await Model.findAll({
@@ -36,15 +33,11 @@ module.exports = async (req, res) => {
     webPush
       .sendNotification(subscription, payload, options)
       .then(() => {
-        res.status(200).send({
-          message: 'OK'
-        });
-        return;
+        sendRes({ res, status: 200 });
       })
       .catch((err) => {
         logger('error', 'push-notification', 500, 'send.js', err);
         res.status(500).send('subscription not possible');
-        return;
       });
   });
 };

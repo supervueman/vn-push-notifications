@@ -8,7 +8,7 @@ const newRulesDefault = require('../data/rules_default.json');
 
 // Healpers
 const createLexicons = require('../../../core/modules/lexicon/helpers/createLexicons');
-const addNewRules = require('../../../handlers/addNewRules');
+const addNewRules = require('../../../core/modules/role/handlers/addNewRules');
 
 module.exports = async () => {
   await createLexicons('ru', ruLexicons);
